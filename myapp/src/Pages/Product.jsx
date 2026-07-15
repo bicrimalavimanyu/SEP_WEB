@@ -1,6 +1,18 @@
+import { useState, useEffect } from "react";
 import { Productcard } from "../components/Productcard";
 
 export function Product() {
+  const [products, setProduct] = useState([]);
+
+  useEffect(() =>{
+    fetch("https://dummyjson.com/products")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.products);
+      setProduct(data.products);
+    })
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
 
@@ -11,11 +23,15 @@ export function Product() {
       </p>
 
       <div className="p-6 bg-white rounded-xl shadow-lg">
-        <Productcard
-          name="Gaming Laptop"
-          description="Powerful laptop with Ryzen 7, RTX Graphics and 16GB RAM."
-          price="$999.99"
-        />
+        {products.map((product) => (
+          <Productcard
+            key={product.id}
+            name={product.title}
+            description={product.description}
+            price={product.price}
+            image={product.images}
+          />
+        ))}
       </div>
 
     </div>
