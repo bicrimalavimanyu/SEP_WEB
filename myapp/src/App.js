@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Home } from "./Pages/Home";
 import { Product } from "./Pages/Product";
+import { ProductDetails } from "./Pages/ProductDetails";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/product" element={<Product />} />
+
+        {/* Dynamic Route */}
+        <Route path="/product/:id" element={<ProductDetails />} />
+
       </Routes>
 
       <Footer />

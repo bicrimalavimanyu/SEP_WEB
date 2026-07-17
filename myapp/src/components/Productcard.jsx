@@ -1,4 +1,6 @@
-export function Productcard({ name, description, price, image }) {
+import { Link } from "react-router-dom";
+
+export function Productcard({ id, name, description, price, image }) {
   return (
     <div className="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
       <svg
@@ -50,6 +52,12 @@ export function Productcard({ name, description, price, image }) {
           />
         </svg>
       </a>
+      <Link to={`/product/${id}`}>
+        <button>
+          View Details
+        </button>
+      </Link>
+
     </div>
   );
 }

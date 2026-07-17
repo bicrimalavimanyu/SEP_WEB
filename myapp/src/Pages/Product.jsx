@@ -6,11 +6,11 @@ export function Product() {
 
   useEffect(() =>{
     fetch("https://dummyjson.com/products")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data.products);
-      setProduct(data.products);
-    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.products);
+        setProduct(data.products);
+      })
   }, [])
 
   return (
@@ -26,6 +26,7 @@ export function Product() {
         {products.map((product) => (
           <Productcard
             key={product.id}
+            id={product.id}
             name={product.title}
             description={product.description}
             price={product.price}
