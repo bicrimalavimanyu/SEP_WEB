@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import { Home } from "./Pages/Home";
 import { Product } from "./Pages/Product";
 import { ProductDetails } from "./Pages/ProductDetails";
+import { NotFound } from "./Pages/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
 
         {/* Dynamic Route */}
         <Route path="/product/:id" element={<ProductDetails />} />
+        
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
 

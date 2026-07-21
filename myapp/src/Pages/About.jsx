@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { PageTitle } from "../components/PageTitle";
 
 export function About() {
   const [count, setCount] = useState(0);
@@ -6,7 +7,7 @@ export function About() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center gap-4">
-
+      <PageTitle title="About" />
       <h1 className="text-3xl font-bold">About Page</h1>
 
       <p className="text-lg text-gray-600">

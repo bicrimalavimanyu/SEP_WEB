@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Productcard } from "../components/Productcard";
+import {PageTitle} from "../components/PageTitle";
 
 export function Product() {
   const [products, setProduct] = useState([]);
 
-  useEffect(() =>{
+  useEffect(() => {
     fetch("https://dummyjson.com/products")
       .then((response) => response.json())
       .then((data) => {
@@ -15,7 +16,7 @@ export function Product() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-
+      <PageTitle title="Product" />
       <h1 className="text-4xl font-bold mb-2">Products</h1>
 
       <p className="text-gray-600 mb-8">
