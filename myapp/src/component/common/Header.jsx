@@ -13,8 +13,7 @@ export default function Header() {
             to="/"
             className="text-2xl font-bold text-gray-900 tracking-tight"
           >
-            Mart<span className="text-blue-600">Nepal</span>
-          </Link>
+            Mart<span className="text-blue-600">Nepal</span>         </Link>
 
           {/* Search */}
           <div className="hidden lg:flex flex-1 max-w-2xl">

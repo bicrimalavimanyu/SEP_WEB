@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-bold text-white">
-              Shop<span className="text-blue-500">Hub</span>
+              Mart<span className="text-blue-500">Nepal</span>
             </h2>
 
             <p className="mt-4 text-gray-400 leading-relaxed max-w-md">
@@ -43,16 +44,16 @@ export default function Footer() {
 
             <ul className="space-y-3">
               <li>
-                <a href="#">Men</a>
+                <Link to="#">Men</Link>
               </li>
               <li>
-                <a href="#">Women</a>
+                <Link to="#">Women</Link>
               </li>
               <li>
-                <a href="#">Electronics</a>
+                <Link to="#">Electronics</Link>
               </li>
               <li>
-                <a href="#">Accessories</a>
+                <Link to="#">Accessories</Link>
               </li>
             </ul>
           </div>
@@ -63,16 +64,16 @@ export default function Footer() {
 
             <ul className="space-y-3">
               <li>
-                <a href="#">Help Center</a>
+                <Link to="#">Help Center</Link>
               </li>
               <li>
-                <a href="#">Returns</a>
+                <Link to="#">Returns</Link>
               </li>
               <li>
-                <a href="#">Shipping</a>
+                <Link to="#">Shipping</Link>
               </li>
               <li>
-                <a href="#">FAQs</a>
+                <Link to="#">FAQs</Link>
               </li>
             </ul>
           </div>
@@ -83,16 +84,16 @@ export default function Footer() {
 
             <ul className="space-y-3">
               <li>
-                <a href="#">About Us</a>
+                <Link to="#">About Us</Link>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <Link to="#">Contact</Link>
               </li>
               <li>
-                <a href="#">Careers</a>
+                <Link to="#">Careers</Link>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <Link to="#">Privacy Policy</Link>
               </li>
             </ul>
           </div>
