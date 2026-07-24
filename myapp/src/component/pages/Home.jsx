@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../common/ProductCard";
 import { GetproductList } from "../../api/product";
 import Loader from "../common/Loader";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const nagivate = useNavigate();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -78,6 +80,16 @@ export default function Home() {
 
           <button className="text-blue-600 font-semibold hover:underline">
             View All →
+          </button>
+          <button
+            className="text-green-600 font-semibold hover:underline"
+            onClick={() => {
+              localStorage.removeItem("token");
+              localStorage.removeItem("userType");
+              nagivate("/login");
+            }}
+          >
+            Logout
           </button>
         </div>
 
